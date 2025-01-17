@@ -1,32 +1,34 @@
 <!-- started on 10/09/2024 by Harsh Yadav -->
+<!-- modified on 17/01/2025 by Harsh Yadav -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time Table</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div>
-        <h1>
-            Time Table
-        </h1>
+      <h1>Time Table</h1>
     </div>
 
     <div>
-        <label for="courseName">Course Code:</label>
-        <select name="courseName" id="courseName">
-            <option value="all">Show All</option>
-            <option value="IC 112">IC 112</option>
-            <option value="IC 113">IC 113</option>
-            <option value="IC 152">IC 152</option>
-            <option value="IC 140 / IC 181">IC 140 / IC 181</option>
-            <option value="IC 230 / IC 136 / IC 131">IC 230 / IC 136 / IC 131</option>
-            
-        </select>
+      <label for="courseName">Course Code:</label>
+      <select name="courseName" id="courseName">
+        <option value="all">Show All</option>
+        <option value="Basket-2">Basket - 2</option>
+        <option value="IC 114">IC 114</option>
+        <option value="IC 115">IC 115</option>
+        <option value="IC 252">IC 252</option>
+        <option value="IC 102">IC 102</option>
+        <option value="IC 182">IC 115</option>
 
-        <!-- <input placeholder="Select Course" type="text" name="courseName" id="courseName" list="courseName list">
+        <option value="IC 140 / IC 182">IC 140 / IC 182</option>
+        <option value="IC 161">IC 161</option>
+      </select>
+
+      <!-- <input placeholder="Select Course" type="text" name="courseName" id="courseName" list="courseName list">
         <datalist id="courseName list">
             <option value="IC 112">IC 112</option>
             <option value="IC 113">IC 113</option>
@@ -35,102 +37,136 @@
             <option value="IC 140 / IC 181">IC 140 / IC 181</option>
         </datalist> -->
     </div>
-    <br>
+    <br />
     <div>
-        <table id="timetable" >
-            <caption>First Semester Time Table</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>
-                        <time datetime="8:00am">8</time> - <time datetime="8:50am">8.50 am</time>
-                    </th>
-                    <th>
-                        <time datetime="9:00am">9</time> - <time datetime="9:50am">9.50 am</time>
-                    </th>
-                    <th>
-                        <time datetime="10:00am">10</time> - <time datetime="10:50am">10.50 am</time>
-                    </th>
-                    <th>
-                        <time datetime="11:00am">11</time> - <time datetime="11:50am">11.50 am</time>
-                    </th>
-                    <th>
-                        <time datetime="12:00pm">12</time> - <time datetime="12:50pm">12.50 pm</time>
-                    </th>
-                    <th>
-                        <time datetime="1:00pm">1</time> - <time datetime="2:00pm">2 pm</time>
-                    </th>
-                    <th>
-                        <time datetime="2:00pm">2</time> - <time datetime="5:00pm">5.00 pm</time>
-                    </th>
-                    <th>
-                        <time datetime="5:00pm">5</time> - <time datetime="5:50pm">5.50 pm</time>
-                    </th>
-                </tr>
-            </thead>
-            <tmain>
-                <tr>
-                    <th>Monday</th>
-                    <td></td>
-                    <td data-course="IC 152" data-venue="Auditorium">IC 152 - B1</td>
-                    <td></td>
-                    <td data-course="IC 230 / IC 136 / IC 131" data-venue="IC 131 -> A13-3A / IC 136 -> A18-2 / IC2 230 -> A18-1">IC 230 / IC 136 / IC 131 - D</td>
-                    <td></td>
-                    <td data-course="Lunch Break">Lunch</td>
-                    <td data-course="IC 152">Lab Slot-1 (IC 152: 3-5 pm)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Tuesday</th>
-                    <td></td>
-                    <td data-course="IC 140 / IC 181" data-venue="IC 140 -> A18-1 / IC 181 -> A18-2">IC 140 / 181 - G</td>
-                    <td></td>
-                    <td data-course="IC 113" data-venue="Auditorium">IC 113 - A</td>
-                    <td data-course="IC 152" data-venue="Auditorium">IC 152 - B (12-1 pm)</td>
-                    <td data-course="Lunch Break">Lunch</td>
-                    <td data-course="IC 152">Lab Slot-2 (IC 152: 3-5 pm)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Wednesday</th>
-                    <td></td>
-                    <td data-course="IC 140 / IC 181" data-venue="IC 140 -> A18-1 / IC 181 -> A18-2">IC 140 / IC 181 - D</td>
-                    <td></td>
-                    <td data-course="IC 112" data-venue="Auditorium">IC 112 - F</td>
-                    <td></td>
-                    <td data-course="Lunch Break">Lunch</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Thursday</th>
-                    <td></td>
-                    <td data-course="IC 152" data-venue="Auditorium">IC 152 - A3 (9-10:30 am)</td>
-                    <td></td>
-                    <td data-course="IC 230 / IC 136 / IC 131" data-venue="IC 131 -> A13-3A / IC 136 -> A18-2 / IC2 230 -> A18-1">IC 230 / IC 136 / IC 131</td>
-                    <td data-course="IC 140 / IC 181" data-venue="IC 140 -> A18-1 / IC 181 -> A18-2">IC 140 (Discussion Class (12-1 pm)) / IC 181</td>
-                    <td data-course="Lunch Break">Lunch</td>
-                    <td data-course="IC 152" data-venue="Auditorium">Lab Slot-3 (IC 152: 3-5 pm)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Friday</th>
-                    <td></td>
-                    <td data-course="IC 230 / IC 136 / IC 131" data-venue="IC 131 -> A13-3A / IC 136 -> A18-2 / IC2 230 -> A18-1">IC 230 / IC 136 / IC 131 - F</td>
-                    <td></td>
-                    <td data-course="IC 112" data-venue="Auditorium">IC 112 - H</td>
-                    <td data-course="IC 113" data-venue="Auditorium">IC 113 - A</td>
-                    <td data-course="Lunch Break">Lunch</td>
-                    <td data-course="IC 140 / IC 181" data-venue="IC 140 -> A18-1 / IC 181 -> A18-2">IC 140 Lab</td>
-                    <td></td>
-                </tr>
-            </tmain>
-        </table>
+      <table id="timetable">
+        <caption>
+          Second Semester Time Table
+        </caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              <time datetime="8:00am">8</time> -
+              <time datetime="8:50am">8.50 am</time>
+            </th>
+            <th>
+              <time datetime="9:00am">9</time> -
+              <time datetime="9:50am">9.50 am</time>
+            </th>
+            <th>
+              <time datetime="10:00am">10</time> -
+              <time datetime="10:50am">10.50 am</time>
+            </th>
+            <th>
+              <time datetime="11:00am">11</time> -
+              <time datetime="11:50am">11.50 am</time>
+            </th>
+            <th>
+              <time datetime="12:00pm">12</time> -
+              <time datetime="12:50pm">12.50 pm</time>
+            </th>
+            <th>
+              <time datetime="1:00pm">1</time> -
+              <time datetime="2:00pm">2 pm</time>
+            </th>
+            <th>
+              <time datetime="2:00pm">2</time> -
+              <time datetime="5:00pm">5.00 pm</time>
+            </th>
+            <th>
+              <time datetime="5:00pm">5</time> -
+              <time datetime="5:50pm">5.50 pm</time>
+            </th>
+          </tr>
+        </thead>
+        <tmain>
+          <tr>
+            <th>Monday</th>
+            <td></td>
+            <td
+              data-course="Basket-2"
+              data-venue="IC 253 -> A18-1  /  IC 240 -> A18-2  /  IC 241 -> A13-3A  /  IC 121 -> A13-1A"
+            >
+              Basket-2- B
+            </td>
+            <td data-course="IC 115" data-venue="Auditorium">IC 115- C</td>
+            <td data-course="IC 252" data-venue="Auditorium">IC 252-D</td>
+            <td data-course="IC 161" data-venue="Auditorium">IC 161-E</td>
+            <td data-course="Lunch Break">Lunch</td>
+            <td data-course="Lab">Lab</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td></td>
+            <td data-course="IC 102" data-venue="A18-1">IC 102/ DC- G</td>
+            <td
+              data-course="Basket-2"
+              data-venue="IC 253 -> A18-1  /  IC 240 -> A18-2  /  IC 241 -> A13-3A  /  IC 121 -> A13-1A"
+            >
+              Basket-2- A
+            </td>
+            <td data-course="IC 114" data-venue="Auditorium">IC 114 - H</td>
+            <td data-course="IC 115" data-venue="Auditorium">IC 115 - B</td>
+            <td data-course="Lunch Break">Lunch</td>
+            <td data-course="Lab">Lab</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td></td>
+            <td data-course="IC 252" data-venue="Auditorium">IC 252- E</td>
+            <td data-course="IC 102" data-venue="A18-1">IC 102/DC -G</td>
+            <td data-course="IC 182" data-venue="A18-1">IC 182-D</td>
+            <td
+              data-course="IC 140 / IC 182"
+              data-venue="IC 140 -> A18-2  /  IC 182 -> A18-1"
+            >
+              IC 140/IC 182- F
+            </td>
+            <td data-course="Lunch Break">Lunch</td>
+            <td data-course="Lab">Lab</td>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td></td>
+            <td
+              data-course="Basket-2"
+              data-venue="IC 253 -> A18-1  /  IC 240 -> A18-2  /  IC 241 -> A13-3A  /  IC 121 -> A13-1A"
+            >
+              Basket-2-D
+            </td>
+            <td data-course="IC 161" data-venue="Auditorium">IC 161- H</td>
+            <td data-course="IC 252" data-venue="Auditorium">IC 252- C</td>
+            <td data-course="IC 114" data-venue="Auditorium">IC 114- A</td>
+            <td data-course="Lunch Break">Lunch</td>
+            <td data-course="Lab">Lab</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td></td>
+            <td data-course="IC 161" data-venue="Auditorium">IC 161- E</td>
+            <td data-course="IC 102" data-venue="A18-1">IC 102/DC -G</td>
+            <td data-course="IC 182" data-venue="A18-1">IC 182- F</td>
+            <td
+              data-course="IC 140  /  IC 182"
+              data-venue="IC 140 -> A18-2  /  IC 182 -> A18-1"
+            >
+              IC 140/IC 182-A
+            </td>
+            <td data-course="Lunch Break">Lunch</td>
+            <td data-course="Lab">Lab</td>
+            <td></td>
+          </tr>
+        </tmain>
+      </table>
     </div>
-        <br>
+    <br />
 
-        <p>Class Venue:</p>
-        <div id="class-venue">
-        </div>
-        <script src="script.js"></script>    
-</body>
+    <p>Class Venue:</p>
+    <div id="class-venue"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
